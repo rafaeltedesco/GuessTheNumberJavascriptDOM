@@ -98,15 +98,13 @@ const countDown = async ()=> {
 const restartGame = (msg, hasWin)=> {
     btnCheck.removeEventListener('click', guess) 
     document.removeEventListener('keydown', guess)
-    timer.style.display = 'none'
+    timer.parentElement.style.display = 'none'
     result.style.display = 'flex'
     result.innerText = msg
     gameContainer.classList.add(hasWin ? 'win': 'lose')  
     btnPlay.style.visibility = 'visible'
     btnPlay.innerText = 'Jogar Novamente!'
     
-    timerValue = 20
-    timer.innerText = `${timerValue}`
     btnCheck.addEventListener('click', infoBeforeStart)
 }
 
@@ -117,9 +115,12 @@ const play = async ()=> {
   tries = 0
   messagesBox.innerText = ''
   result.style.display = 'none'
+  timer.parentElement.style.display = 'flex'
   timer.style.display = 'inline'
   userInput.value = ''
   score.innerText = ''
+  timerValue = 20
+  timer.innerText = `${timerValue}`
   gameContainer.classList.remove(...gameContainer.classList)
   gameContainer.classList.add('game')
  
