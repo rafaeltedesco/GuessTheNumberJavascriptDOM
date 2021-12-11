@@ -40,6 +40,7 @@ const guess = ()=> {
   else {
     if (answer === pcChoice) {
       messagesBox.innerText = 'Parabéns! Você venceu!'
+      randomNumber.innerText = pcChoice
       gameContainer.classList.add('win')
       clearInterval(gameInterval)
       let newScore = Math.ceil(timerValue/tries) * 200
@@ -119,6 +120,7 @@ const play = async ()=> {
   timer.style.display = 'inline'
   userInput.value = ''
   score.innerText = ''
+  randomNumber.innerText = '?'
   timerValue = 20
   timer.innerText = `${timerValue}`
   gameContainer.classList.remove(...gameContainer.classList)
