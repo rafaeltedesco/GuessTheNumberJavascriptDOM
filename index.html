@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/styles/style.css">
+  <script src="./src/scripts/script.js" defer></script>
+  <title>Adivinhe o Número</title>
+</head>
+<body>
+  <div class="game">
+    <header>
+      <button class="play">
+        Jogar!
+      </button>
+      <p class="instructions">
+        &lt;Entre 1 e 20&gt;
+      </p>
+    </header>
+    <main>
+      <h1>Adivinhe o Número!</h1>
+      <div class="randomNumberContainer">
+        <div class="line"></div>
+        <div class="randomNumberBox">?</div>
+      </div>
+      <div class="playable-container">
+        <div class="player-choice">
+          <input type="number" class="input-choice">
+          <button id="btn-check">Dar Palpite!</button>
+        </div>
+        <div class="score-info">
+          <p class="info">Tempo: <span data-timer></span></p>
+          <p class="info hide" data-result>Resposta Correta</p>
+          <div class="score-box">
+            <p class="info">Score: <span class="score-result"></span></p>
+            <p class="info">Highscore: <span class="highscore-result"></span></p>
+          </div>
+        </div>
+      </div>
+
+        <div class="messages">
+  
+        </div>
+    </main>
+
+
+  </div>
+</body>
+</html>

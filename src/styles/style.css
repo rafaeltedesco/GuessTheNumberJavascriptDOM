@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bgColor-win: rgb(83, 204, 83);
+  --bgColor: gray;
+  --bgColor-lose: #f00;
+  --white: rgb(255, 251, 251);
+}
+
+body {
+  font-size: 22px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.game {
+  background-color: var(--bgColor);
+  min-height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.game.win {
+  background-color: var(--bgColor-win);
+}
+.game.lose {
+  background-color: var(--bgColor-lose);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.randomNumberContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  z-index: 1;
+}
+
+.line {
+  background-color: var(--white);
+  height: 7px;
+  position: absolute;
+  width: 100vw;
+  top: 50%;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+.randomNumberBox {
+  font-size: 4rem;
+  color: #333;
+  background-color: var(--white);
+  padding: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+.playable-container {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+}
+
+.score-info,
+.player-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 22vh;
+}
+
+.info::before {
+  content: "";
+  background-color: rgb(255, 197, 36);
+  border: 1px solid #333;
+  height: 5px;
+  width: 5px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+input {
+  background-color: transparent;
+  border: 2px solid var(--white);
+  font-size: 32px;
+  text-align: center;
+  max-width: 180px;
+  padding: 10px 0;
+  color: var(--white);
+  font-weight: bold;
+  outline: none;
+}
+
+input::placeholder {
+  color: #eee;
+}
+
+button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.3rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hide {
+  display: none;
+}
+
+.messages {
+  background-color: rgb(95, 95, 95);
+  width: 100vw;
+  min-height: 9vh;
+  color: #fff;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
